@@ -1,0 +1,19 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: prod-cicd-Deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: prod-cicd
+  template:
+    metadata:
+      labels:
+        app: prod-cicd
+    spec:
+      containers:
+        - name: prod-cicd
+          image: sourodip290301/multibranch-flask-app:latest
+          ports:
+            - containerPort: 5000
