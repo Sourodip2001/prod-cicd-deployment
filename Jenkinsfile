@@ -144,7 +144,7 @@ pipeline {
                             git diff --cached --quiet || \
                                 git commit -m "Image tag updated to ${IMAGE_TAG}"
 
-                            git push https://${GIT_USER}:${GIT_PASS}@github.com/sourodip290301/prod-cicd-deployment.git main
+                            git push https://${GIT_USER}:${GIT_PASS}@github.com/Sourodip2001/prod-cicd-deployment.git main
                         '''
                     }
                 }
